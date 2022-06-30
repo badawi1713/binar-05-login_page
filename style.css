@@ -80,6 +80,7 @@ input {
     outline: none;
     border-radius: 0 0 4px 4px;
     color: var(--text-body);
+    background-color: var(--white);
 }
 
 input[type="email"] {
