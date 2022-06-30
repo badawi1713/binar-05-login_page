@@ -70,10 +70,16 @@ body {
     width: 100%;
 }
 
+::placeholder {
+    color: var(--text-placeholder);
+    opacity: 1;
+}
+
 input {
     border: 1px solid var(--border-color);
     outline: none;
     border-radius: 0 0 4px 4px;
+    color: var(--text-body);
 }
 
 input[type="email"] {
