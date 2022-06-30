@@ -6,10 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-
+    <main class="container">
+        <form class="form__container">
+            <img class="form__logo" src="./public/bootstrap-solid.svg" alt="logo" width="72" height="72">
+            <h1 class="form__title">Please sign in</h1>
+            <label for="inputEmail"></label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required=""
+                autofocus="" />
+            <label for="inputPassword"></label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" />
+            <div class="form__checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+            <button type="submit">Sign in</button>
+            <footer>
+                <p>&copy; 2022</p>
+            </footer>
+        </form>
+    </main>
 </body>
 
 </html>

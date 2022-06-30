@@ -1,113 +1,142 @@
+:root {
+    --box-shadow-primary: 0 0 0 0.2rem rgb(0, 123, 255, 0.25);
+    --background-color: #f5f5f5;
+    --border-color: #cdcdcd;
+    --primary-color: #007bff;
+    --primary-color-hover: #0062cc;
+    --primary-border-color: ##005cbf;
+    --text-body: #212529;
+    --text-placeholder: #495057;
+    --text-footer: #6c757d;
+    --white: #fff;
+}
+
+html {
+    font-size: 62.5%;
+}
+
 * {
+    border: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    padding-bottom: 3rem;
-    color: #5a5a5a;
+    background-color: var(--background-color);
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.featurette-divider {
-    margin: 5rem 0;
-}
-
-.carousel {
-    margin-bottom: 4rem;
-}
-
-.carousel-caption {
-    bottom: 3rem;
-    z-index: 10;
-}
-
-.carousel-item {
-    height: 32rem;
-}
-
-.content .col-lg-4 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-.content .col-lg-4 p {
-    margin-right: 0.75rem;
-    margin-left: 0.75rem;
-}
-
-.featurette-divider {
-    margin: 5rem 0;
-}
-
-.featurette-heading {
-    letter-spacing: -0.05rem;
-}
-
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
-
-.b-example-divider {
-    height: 3rem;
-    background-color: rgba(0, 0, 0, 0.1);
-    border: solid rgba(0, 0, 0, 0.15);
-    border-width: 1px 0;
-    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
-}
-
-.b-example-vr {
-    flex-shrink: 0;
-    width: 1.5rem;
-    height: 100vh;
-}
-
-.bi {
-    vertical-align: -0.125em;
-    fill: currentColor;
-}
-
-.nav-scroller {
-    position: relative;
-    z-index: 2;
-    height: 2.75rem;
-    overflow-y: hidden;
-}
-
-.nav-scroller .nav {
+.container {
+    width: 100%;
     display: flex;
-    flex-wrap: nowrap;
-    padding-bottom: 1rem;
-    margin-top: -1px;
-    overflow-x: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.form__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    width: 100%;
+    max-width: 330px;
+}
+
+.form__logo {
+    margin-bottom: 24px;
+}
+
+.form__title {
+    font-size: 2.8rem;
+    line-height: 33.6px;
     text-align: center;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
+    letter-spacing: normal;
+    font-weight: normal;
+    margin-bottom: 16px;
 }
 
-@media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-    }
+.form-control {
+    position: relative;
+    padding: 10px;
+    font-size: 1.6rem;
+    line-height: 24px;
+    text-align: start;
+    letter-spacing: normal;
+    width: 100%;
 }
 
-@media (min-width: 40em) {
-    .featurette-heading {
-        font-size: 50px;
-    }
-
-    .carousel-caption p {
-        margin-bottom: 1.25rem;
-        font-size: 1.25rem;
-        line-height: 1.4;
-    }
+input {
+    border: 1px solid var(--border-color);
+    outline: none;
+    border-radius: 0 0 4px 4px;
 }
 
-@media (min-width: 62em) {
-    .featurette-heading {
-        margin-top: 7rem;
-    }
+input[type="email"] {
+    margin-bottom: -1px;
+    border-radius: 4px 4px 0 0;
+}
+
+input[type="email"]:focus {
+    z-index: 2;
+    border: 1px solid var(--primary-border-color);
+}
+
+input[type="password"] {
+    margin-bottom: 10px;
+}
+
+input[type="password"]:focus {
+    z-index: 1;
+    border: 1px solid var(--primary-border-color);
+}
+
+button {
+    cursor: pointer;
+    padding: 8px 16px;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    font-size: 2rem;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: normal;
+    color: var(--white);
+}
+
+button:hover {
+    background-color: var(--primary-color-hover);
+    border: 1px solid var(--primary-border-color);
+}
+
+input:focus,
+button:focus {
+    outline: 0;
+    box-shadow: var(--box-shadow-primary);
+}
+
+.form__checkbox > label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    align-items: center;
+    gap: 6px;
+    font-size: 1.6rem;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: normal;
+    margin-bottom: 24px;
+}
+
+footer {
+    margin-top: 48px;
+    color: var(--text-footer);
+    font-size: 1.6rem;
+    line-height: 24px;
+    text-align: start;
+    letter-spacing: normal;
 }
